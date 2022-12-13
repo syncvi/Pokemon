@@ -5,6 +5,7 @@ import time
 import customtkinter as ctk
 # from pokemon_battle import initialize_battle
 from views.View import View
+import random
 
 
 """
@@ -91,7 +92,7 @@ class PokedexView(ctk.CTkToplevel, View):
         self.slider_progressbar_frame.pack(padx=10, pady=10)
         self.progressbar_1.pack(padx=10, pady=10)
 
-        for i in range(100):
+        for i in range(100+random.randint(10,50)):
 
             self.update()
             time.sleep(0.01)
